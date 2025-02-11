@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.logging.*;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -28,18 +29,23 @@ public class FakeNetworkRequestLogger
 
     public static void main(String[] args)
     {
-        fakeLogger.info("Logging a simulated network request...");
-
-        try
-        { 
-            Thread.sleep(1000);
-            fakeLogger.info("Information request recieved from network(thread slept for 1000millis)");
-        }
-        catch(InterruptedException e)
+        for(int i = 0; i < 50; i++)
         {
-            fakeLogger.severe("Netork error occured(thread sleep interupted " + e.getMessage());
-        }
+            fakeLogger.info("205.160.186.7" + i + " uknown [" + LocalDateTime.now() + "]" + "GET /bgs/geenbg.gif HTTP 1.0 200 5" + i);
 
+            try
+            { 
+                Thread.sleep(1000);
+                fakeLogger.info("Information request recieved from network(thread slept for 1000millis)");
+            }
+            catch(InterruptedException e)
+            {
+                fakeLogger.severe("Netork error occured(thread sleep interupted " + e.getMessage());
+            }
+    
+
+        }
+       
 
     }
 
