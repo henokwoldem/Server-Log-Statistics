@@ -1,0 +1,4 @@
+Feb 10, 2025 1:45:15 PM FakeNetworkRequestLogger main
+INFO: Logging a simulated network request...
+Feb 10, 2025 1:45:16 PM FakeNetworkRequestLogger main
+INFO: Information request recieved from network(thread slept for 1000millis)
