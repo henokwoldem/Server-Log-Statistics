@@ -14,7 +14,7 @@ import java.util.Map;
 
             Example: java MyPooledWeblog fakeRequest.log 1
         */
-public class MypPooledWeblog {
+public class MyPooledWeblog {
 
     public static void addValueOrUpdateKeyValue( Map<String, Integer> keyValueListToFill, String ip, Integer bits)
     {
